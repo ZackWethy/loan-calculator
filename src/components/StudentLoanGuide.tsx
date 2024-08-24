@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import QuickCalculator from './QuickCalculator';
 
 const StudentLoanGuide: React.FC = () => {
   return (
@@ -39,31 +40,9 @@ const StudentLoanGuide: React.FC = () => {
           <p className="mb-4">
             Our student loan calculator is an essential tool for planning your education financing. Use it to estimate payments, compare loan options, and understand the long-term impact of your student loans:
           </p>
-          <div className="grid grid-cols-3 gap-4 mb-4">
-            <input
-              type="number"
-              placeholder="Loan Amount"
-              className="p-2 border rounded"
-              aria-label="Enter loan amount for student loan calculator"
-            />
-            <input
-              type="number"
-              placeholder="Interest Rate (%)"
-              className="p-2 border rounded"
-              aria-label="Enter interest rate for student loan calculator"
-            />
-            <input
-              type="number"
-              placeholder="Loan Term (years)"
-              className="p-2 border rounded"
-              aria-label="Enter loan term for student loan calculator"
-            />
-          </div>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-            Calculate Student Loan
-          </button>
+          <QuickCalculator />
           <p className="mt-4">
-            For more detailed calculations and in-depth analysis, visit our <Link to="/" className="text-blue-600 hover:underline">advanced student loan calculator</Link> page.
+            For a more detailed analysis, try our <Link to="/" className="text-blue-600 hover:underline">advanced student loan calculator</Link>.
           </p>
         </section>
 
