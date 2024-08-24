@@ -180,22 +180,22 @@ const LoanCalculator: React.FC = () => {
     return 10; // Default to 10 years if no valid term is available
   };
 
+  const calculatorSchema = {
+    "@context": "https://schema.org",
+    "@type": "FinancialCalculator",
+    "name": "Student Loan Calculator",
+    "description": "Use our free student loan calculator to estimate payments, compare repayment strategies, and plan your financial future. Trusted by students and graduates.",
+    "url": "https://student-loan-calculator.com",
+    "category": "Student Loans",
+    "image": "https://student-loan-calculator.com/og-image.jpg"
+  };
+
   return (
     <>
       <Helmet>
         <title>Student Loan Calculator | Estimate Payments and Compare Strategies</title>
         <meta name="description" content="Use our free student loan calculator to estimate monthly payments, compare repayment strategies, and plan your financial future. Trusted by students and graduates." />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "FinancialCalculator",
-              "name": "Student Loan Calculator",
-              "description": "Calculate student loan payments and compare repayment strategies",
-              "url": "https://www.student-loan-calculator.com/"
-            }
-          `}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(calculatorSchema)}</script>
       </Helmet>
 
       <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg overflow-hidden">

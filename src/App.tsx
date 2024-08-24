@@ -8,6 +8,8 @@ import LoanTypes from './components/LoanTypes';
 import RepaymentStrategies from './components/RepaymentStrategies';
 import Glossary from './components/Glossary';
 import FAQ from './components/FAQ';
+import Blog from './components/Blog';
+import BlogPost from './components/BlogPost';
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
             <Route path="/loan-types" element={<LoanTypes />} />
             <Route path="/repayment-strategies" element={<RepaymentStrategies />} />
             <Route path="/glossary" element={<Glossary />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
           </Routes>
         </Layout>
       </Router>

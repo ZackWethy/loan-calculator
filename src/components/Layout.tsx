@@ -31,6 +31,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
               <li><button onClick={() => handleNavigation('/loan-types')} className="block hover:text-blue-200 w-full text-left">Loan Types</button></li>
               <li><button onClick={() => handleNavigation('/repayment-strategies')} className="block hover:text-blue-200 w-full text-left">Repayment</button></li>
               <li><button onClick={() => handleNavigation('/glossary')} className="block hover:text-blue-200 w-full text-left">Glossary</button></li>
+              <li><button onClick={() => handleNavigation('/blog')} className="block hover:text-blue-200 w-full text-left">Blog</button></li>
               <li><button onClick={() => handleNavigation('/faq')} className="block hover:text-blue-200 w-full text-left">FAQ</button></li>
             </ul>
           </nav>
@@ -40,6 +41,15 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         {children}
       </main>
       <footer className="bg-gray-100 text-center py-4">
+        <nav className="mb-2">
+          <Link to="/" className="text-blue-600 hover:underline mx-2">Home</Link>
+          <Link to="/guide" className="text-blue-600 hover:underline mx-2">Guide</Link>
+          <Link to="/loan-types" className="text-blue-600 hover:underline mx-2">Loan Types</Link>
+          <Link to="/repayment-strategies" className="text-blue-600 hover:underline mx-2">Repayment</Link>
+          <Link to="/glossary" className="text-blue-600 hover:underline mx-2">Glossary</Link>
+          <Link to="/blog" className="text-blue-600 hover:underline mx-2">Blog</Link>
+          <Link to="/faq" className="text-blue-600 hover:underline mx-2">FAQ</Link>
+        </nav>
         <p>&copy; 2024 Student Loan Calculator. All rights reserved.</p>
       </footer>
     </div>
