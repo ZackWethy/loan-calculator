@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import Layout from './components/Layout';
+import LoanCalculator from './components/LoanCalculator';
+import StudentLoanGuide from './components/StudentLoanGuide';
+import LoanTypes from './components/LoanTypes';
+import RepaymentStrategies from './components/RepaymentStrategies';
+import Glossary from './components/Glossary';
+import FAQ from './components/FAQ';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HelmetProvider>
+      <Router>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<LoanCalculator />} />
+            <Route path="/guide" element={<StudentLoanGuide />} />
+            <Route path="/loan-types" element={<LoanTypes />} />
+            <Route path="/repayment-strategies" element={<RepaymentStrategies />} />
+            <Route path="/glossary" element={<Glossary />} />
+            <Route path="/faq" element={<FAQ />} />
+          </Routes>
+        </Layout>
+      </Router>
+    </HelmetProvider>
   );
 }
 
