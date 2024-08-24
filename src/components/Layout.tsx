@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleNavigation = (path: string) => {
+    setIsMenuOpen(false);
+    navigate(path);
   };
 
   return (
@@ -20,12 +26,12 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           </button>
           <nav className={`md:flex ${isMenuOpen ? 'block' : 'hidden'} absolute md:relative top-16 md:top-0 left-0 right-0 bg-blue-600 md:bg-transparent`}>
             <ul className="md:flex space-y-2 md:space-y-0 md:space-x-4 p-4 md:p-0">
-              <li><Link to="/" className="block hover:text-blue-200">Calculator</Link></li>
-              <li><Link to="/guide" className="block hover:text-blue-200">Guide</Link></li>
-              <li><Link to="/loan-types" className="block hover:text-blue-200">Loan Types</Link></li>
-              <li><Link to="/repayment-strategies" className="block hover:text-blue-200">Repayment</Link></li>
-              <li><Link to="/glossary" className="block hover:text-blue-200">Glossary</Link></li>
-              <li><Link to="/faq" className="block hover:text-blue-200">FAQ</Link></li>
+              <li><button onClick={() => handleNavigation('/')} className="block hover:text-blue-200 w-full text-left">Calculator</button></li>
+              <li><button onClick={() => handleNavigation('/guide')} className="block hover:text-blue-200 w-full text-left">Guide</button></li>
+              <li><button onClick={() => handleNavigation('/loan-types')} className="block hover:text-blue-200 w-full text-left">Loan Types</button></li>
+              <li><button onClick={() => handleNavigation('/repayment-strategies')} className="block hover:text-blue-200 w-full text-left">Repayment</button></li>
+              <li><button onClick={() => handleNavigation('/glossary')} className="block hover:text-blue-200 w-full text-left">Glossary</button></li>
+              <li><button onClick={() => handleNavigation('/faq')} className="block hover:text-blue-200 w-full text-left">FAQ</button></li>
             </ul>
           </nav>
         </div>
