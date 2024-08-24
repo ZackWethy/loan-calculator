@@ -122,11 +122,28 @@ const StudentLoanGuide: React.FC = () => {
           </p>
         </section>
 
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">Avoiding Student Loan Scams</h2>
+          <p className="mb-4">
+            As you navigate the world of student loans, it's crucial to be aware of potential scams and predatory practices. Many unscrupulous individuals and companies try to take advantage of students and graduates struggling with loan debt.
+          </p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Be wary of any company promising immediate loan forgiveness</li>
+            <li>Never pay upfront fees for loan consolidation or forgiveness services</li>
+            <li>Protect your personal information, especially your Federal Student Aid ID</li>
+            <li>Research companies thoroughly before engaging their services</li>
+          </ul>
+          <p className="mt-4">
+            <Link to="/student-loan-scams" className="text-blue-600 hover:underline">Learn more about avoiding student loan scams</Link>
+          </p>
+        </section>
+
         <nav className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Related Resources</h2>
           <ul>
             <li><Link to="/loan-types" className="text-blue-600 hover:underline">Learn more about different loan types</Link></li>
             <li><Link to="/repayment-strategies" className="text-blue-600 hover:underline">Explore repayment strategies</Link></li>
+            <li><Link to="/student-loan-scams" className="text-blue-600 hover:underline">How to avoid student loan scams</Link></li>
             <li><a href="https://studentaid.gov/understand-aid/types/loans" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Official Federal Student Aid website</a></li>
           </ul>
         </nav>
@@ -149,6 +166,10 @@ const StudentLoanGuide: React.FC = () => {
             <div>
               <h3 className="text-lg font-medium mb-2">Q: What happens if I can't make my loan payments?</h3>
               <p>A: If you're struggling to make payments, contact your loan servicer immediately. For federal loans, you may be eligible for deferment, forbearance, or income-driven repayment plans. Private lenders may offer their own hardship options.</p>
+            </div>
+            <div>
+              <h3 className="text-lg font-medium mb-2">Q: How can I protect myself from student loan scams?</h3>
+              <p>A: Be cautious of any company promising immediate loan forgiveness, never pay upfront fees for loan services, and always verify the legitimacy of a company before sharing personal information. Use official government resources for information about loan forgiveness and repayment options.</p>
             </div>
           </div>
         </section>
