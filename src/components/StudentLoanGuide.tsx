@@ -134,7 +134,7 @@ const StudentLoanGuide: React.FC = () => {
             <li>Research companies thoroughly before engaging their services</li>
           </ul>
           <p className="mt-4">
-            <Link to="/student-loan-scams" className="text-blue-600 hover:underline">Learn more about avoiding student loan scams</Link>
+            <Link to="/blog/student-loan-scams" className="text-blue-600 hover:underline">Learn more about avoiding student loan scams</Link>
           </p>
         </section>
 
@@ -143,7 +143,7 @@ const StudentLoanGuide: React.FC = () => {
           <ul>
             <li><Link to="/loan-types" className="text-blue-600 hover:underline">Learn more about different loan types</Link></li>
             <li><Link to="/repayment-strategies" className="text-blue-600 hover:underline">Explore repayment strategies</Link></li>
-            <li><Link to="/student-loan-scams" className="text-blue-600 hover:underline">How to avoid student loan scams</Link></li>
+            <li><Link to="/blog/student-loan-scams" className="text-blue-600 hover:underline">How to avoid student loan scams</Link></li>
             <li><a href="https://studentaid.gov/understand-aid/types/loans" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Official Federal Student Aid website</a></li>
           </ul>
         </nav>
