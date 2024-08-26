@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const glossaryTerms = [
-  { term: "Accrued Interest", definition: "Interest that has accumulated on the principal of a loan but has not yet been paid.", source: "https://studentaid.gov/understand-aid/types/loans/interest" },
+  { term: "Accrued Interest", definition: "Interest that has accumulated on the principal of a loan but has not yet been paid.", source: "https://studentaid.gov/understand-aid/types/loans/subsidized-unsubsidized#interest" },
   { term: "Amortization", definition: "The process of paying off a debt over time through regular payments.", source: "https://www.investopedia.com/terms/a/amortization.asp" },
   { term: "Annual Percentage Rate (APR)", definition: "The yearly cost of borrowing, including interest and fees, expressed as a percentage.", source: "https://www.consumerfinance.gov/ask-cfpb/what-is-an-apr-annual-percentage-rate-en-1989/" },
   { term: "Borrower", definition: "The person who receives the loan and is responsible for repaying it.", source: "https://studentaid.gov/understand-aid/types/loans/subsidized-unsubsidized" },
